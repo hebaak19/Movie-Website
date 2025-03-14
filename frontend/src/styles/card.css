@@ -1,0 +1,42 @@
+.card{
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.card ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.card ul img{
+    width: 250px;
+    height: 300px;
+    padding: 15px;
+    border-radius: 20px;
+
+}
+.name{
+    font-size: 18px;
+    font-weight: 600;
+    list-style-type: none;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.line{
+    height: 2px;
+    background-color: black;
+    width: 100%;
+    margin: 25px auto;
+
+}
+

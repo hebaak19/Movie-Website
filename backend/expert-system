@@ -1,0 +1,58 @@
+% Welcome messages
+welcome_msg('Welcome to our movie recommendation system.').
+movie('Spider-Man', action, 'Sam Raimi', 7.3, '/poster/spider-man.png').
+movie('Spider-Man 2', action, 'Sam Raimi', 8.7, '/poster/spider-man-2.png').
+movie('Doctor Strange', sci-fi, 'Sam Raimi', 9.3, '/poster/doctor-strange.png').
+movie('The Gift', sci-fi, 'Sam Raimi', 7.0, '/poster/the-gift.png').
+movie('Evil Dead', horror, 'Sam Raimi', 7.5, '/poster/evil-dead.png').
+movie('Evil Dead 2', horror, 'Sam Raimi', 8.2, '/poster/evil-dead-2.png').
+movie('A Quiet Place', thriller, 'Sam Raimi', 7.7, '/poster/quiet-place.png').
+movie('Drag Me to Hell', thriller, 'Sam Raimi', 8.0, '/poster/drag-me-to-hell.png').
+movie('Darkman', spy, 'Sam Raimi', 6.2, '/poster/darkman.png').
+movie('The Quick and the Dead', spy, 'Sam Raimi', 8.0, '/poster/quick-and-dead.png').
+
+movie('Deadpool 2', action, 'Leitch', 7.9, '/poster/deadpool2.png').
+movie('Deadpool', action, 'Leitch', 8.7, '/poster/deadpool.png').
+movie('John Wick', thriller, 'Leitch', 7.9, '/poster/john-Wick.png').
+movie('Atomic Blonde', thriller, 'Leitch', 8.2, '/poster/atomic-blonde.png').
+movie('Fast & Furious Presents: Hobbs & Shaw', spy, 'Leitch', 7.6, '/poster/fast-Furious.png').
+movie('Mission Impossible: Fallout', spy, 'Leitch', 8.4, '/poster/mission-impossible2.png').
+movie('Atomic Blonde', crime, 'Leitch', 7.0, '/poster/atomic-blonde.png').
+movie('The Town', crime, 'Leitch', 8.3, '/poster/the-town.png').
+movie('Hellboy', horror, 'Leitch', 8.1, '/poster/hellboy.png').
+movie('The Crow', horror, 'Leitch', 7.5, '/poster/theCrow.png').
+
+movie('Chernobyl', drama, 'Mazin', 9.4, '/poster/Chernobyl.png').
+movie('The Road', drama, 'Mazin', 7.1, '/poster/the-road.png').
+movie('The Last of Us', thriller, 'Mazin', 9.2, '/poster/lastOFUs.png').
+movie('The Mist', thriller, 'Mazin', 7.4, '/poster/the-mist.png').
+movie('A Beautiful Mind', sci-fi, 'Mazin', 7.2, '/poster/beautiful-mind.png').
+movie('Interstellar', sci-fi, 'Mazin', 8.7, '/poster/interstellar.png').
+movie('The Green Mile', crime, 'Mazin', 9.0, '/poster/green-Mile.png').
+movie('The Outsider', crime, 'Mazin', 7.8, '/poster/the-outsider.png').
+movie('Borderlands', action, 'Mazin', 7.0, '/poster/borderlands.png').
+movie('Mad Max: Fury Road', action, 'Mazin', 8.8, '/poster/mad-max.png').
+
+movie('Scarface', crime, 'Brian De Palma', 8.3, '/poster/Scarface.png').
+movie('The Untouchables', crime, 'Brian De Palma', 7.8, '/poster/untouchables.png').
+movie('Mission: Impossible', spy, 'Brian De Palma', 7.9, '/poster/Mission-Impossible.png').
+movie('Mission Impossible: Fallout', spy, 'Brian De Palma', 8.8, '/poster/mission-fallout.png').
+movie('The Untouchables', thriller, 'Brian De Palma', 7.8, '/poster/untouchables.png').
+movie('A Bronx Tale', drama, 'Brian De Palma', 7.5, '/poster/a-bronx-tale.png').
+movie('The Godfather', drama, 'Brian De Palma', 9.2, '/poster/godfather.png').
+movie('Mission to Mars', sci-fi, 'Brian De Palma', 5.7, '/poster/missionOfMars.png').
+
+movie('The Dark Knight', thriller, 'Nolan', 9.0, '/poster/darkk-Knight.png').
+movie('The Prestige', thriller, 'Nolan', 7.5, '/poster/prestige.png').
+movie('Inception', sci-fi, 'Nolan', 8.8, '/poster/Inception.png').
+movie('Tenet', sci-fi, 'Nolan', 7.3, '/poster/tenet.png').
+movie('Interstellar', drama, 'Nolan', 8.6, '/poster/Interstellar.png').
+movie('The Dark Knight Rises', drama, 'Nolan', 7.8, '/poster/dark-knight-rises.png').
+movie('Dunkirk', action, 'Nolan', 7.9, '/poster/dunkirk.png').
+movie('Mad Max: Fury Road', action, 'Nolan', 8.9, '/poster/mad-max.png').
+movie('Following', crime, 'Nolan', 7.5, '/poster/following.png').
+movie('The Dark Knight', crime, 'Nolan', 9.0, '/poster/darkk-Knight.png').
+% Rule for selecting movies based on filters
+select_movie(Type, Director, RatingPreference, Image, Movie) :-
+    movie(Movie, Type, Director, Rating, Image),
+    (RatingPreference == high -> Rating >= 8.0 ; RatingPreference == low -> Rating =< 8.0).
