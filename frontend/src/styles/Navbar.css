@@ -34,3 +34,26 @@ nav ul li{
     text-decoration: none;
     color: #F6F0F0;
 }
+
+@media(max-width:1000px){
+    nav{
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+    nav ul li{
+        margin: 7.5px 10px;
+        font-size: 13px;
+    }
+}
+@media(max-width:500px){
+    nav {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+
+    }
+    nav ul li{
+        margin: 3px 4px;
+    }
+    
+}

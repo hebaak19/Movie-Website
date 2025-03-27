@@ -25,4 +25,33 @@
     margin: 10px auto 20px;
     font-size: 25px;
     font-weight: 500;
+    max-width: 800;
+}
+
+@media(max-width:1000px){
+    .hero-text h1{
+        font-size: 35px;
+    }
+    .hero-text p{
+        font-size: 20px;
+    }
+    .Hero{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+@media(max-width:500px){
+    .Hero{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .hero-text h1{
+        font-size: 30px;
+        max-width: 600;
+    }
+    .hero-text p{
+        font-size: 15px;
+        max-width: 600;
+    }
+
 }

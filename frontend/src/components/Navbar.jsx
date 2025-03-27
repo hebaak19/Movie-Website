@@ -18,7 +18,7 @@ const Navbar = () => {
         <div>
             <ul>
                 <li><Link to="Hero" smooth={true} duration={600} >Home</Link></li>
-                <li><Link to="form" smooth={true} duration={600}>Search</Link> <Search className='icon'/></li>
+                <li><Link to="form" smooth={true} duration={600} offset={-58}>Search</Link> <Search className='icon'/></li>
             </ul>
         </div>
     </nav>
