@@ -24,6 +24,8 @@ class UserPreferences(BaseModel):
     director:str
     rating:str
 
+
+
 @app.get("/welcome")
 def welome_msg():
     """It will return the welcome msg"""

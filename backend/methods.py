@@ -5,6 +5,7 @@ from pydantic import BaseModel
 prolog=Prolog()
 prolog.consult('expert-system')
 
+
 class UserPreferences(BaseModel):
     """class to ensure all prefrences are strings"""
     genre:str
@@ -36,5 +37,5 @@ class ExpertSystem:
                 recommendations.append(res["Movie"])
                 images.append(res["Image"])
             return {"movies": recommendations, "images": [f"http://localhost:3000{img}" for img in images] }
-   
+
 

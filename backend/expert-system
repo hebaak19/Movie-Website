@@ -53,6 +53,8 @@ movie('Mad Max: Fury Road', action, 'Nolan', 8.9, '/poster/mad-max.png').
 movie('Following', crime, 'Nolan', 7.5, '/poster/following.png').
 movie('The Dark Knight', crime, 'Nolan', 9.0, '/poster/darkk-Knight.png').
 % Rule for selecting movies based on filters
-select_movie(Type, Director, RatingPreference, Image, Movie) :-
-    movie(Movie, Type, Director, Rating, Image),
-    (RatingPreference == high -> Rating >= 8.0 ; RatingPreference == low -> Rating =< 8.0).
+
+select_movie(Type, Director, 'high', Image, Movie) :-
+    movie(Movie, Type, Director, Rating, Image), Rating >= 8.0.
+select_movie(Type, Director, 'low', Image, Movie) :-
+    movie(Movie, Type, Director, Rating, Image), Rating =< 8.0.
